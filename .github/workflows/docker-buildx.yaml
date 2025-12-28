@@ -74,7 +74,6 @@ jobs:
         with:
           images: ${{ inputs.registry }}/${{ inputs.registry_owner }}/${{ inputs.image_name }}
           tags: |
-            latest
             ${{ github.sha }}
             ${{ inputs.image_tag != '' && inputs.image_tag || env.IMAGE_TAG }}
 
