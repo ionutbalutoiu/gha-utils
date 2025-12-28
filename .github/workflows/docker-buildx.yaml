@@ -65,7 +65,7 @@ jobs:
           password: ${{ secrets.registry_password || secrets.GITHUB_TOKEN }}
 
       - name: Set the image tag environment variable
-        if: inputs.image_tag != '' && github.ref_type == 'tag'
+        if: inputs.image_tag == '' && github.ref_type == 'tag'
         run: echo "IMAGE_TAG=$(echo ${{ github.ref_name }} | sed "s/^${{ inputs.image_name }}-//")" >> $GITHUB_ENV
 
       - name: Docker meta
