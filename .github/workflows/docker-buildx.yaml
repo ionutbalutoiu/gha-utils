@@ -11,7 +11,7 @@ on:
       registry_owner:
         required: false
         type: string
-        default: balutoiu # GitHub Org
+        default: ionutbalutoiu
 
       image_name:
         required: true
